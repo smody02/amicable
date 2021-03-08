@@ -1,0 +1,76 @@
+body,html{
+  font-size: 24px;
+  font-family: "Lucida Console", "Courier New", monospace;
+  text-align:center;
+  box-sizing:border-box;
+  margin:10px;
+  color: #333333;
+  font-weight: bold;
+  background-color: #F1F4EE;
+  background-size:cover; height:15%;
+  width:100%;
+}
+
+form{
+  position : relative;
+  box-sizing: border-box;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 24px;
+  margin: 14px;
+}
+
+.button {
+  font-family: "Lucida Console", "Courier New", monospace;
+  position : right;
+  background-color: #D4DCCD; /* Green */
+  border: none;
+  color: #333333;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin: 4px 2px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.button1 {
+  position : right;
+  background-color: white;
+  color: #333333;
+  border: 2px solid #D4DCCD;
+}
+
+.button1:hover {
+  background-color: #D4DCCD;
+  color: #333333;
+}
+
+#top {
+  background-color: #D4DCCD;
+  background-size:cover; height:15%;
+  width:100%;
+  padding:35px;
+  box-sizing:border-box;
+  text-align:center;
+  margin:10px;
+  position:set;
+  }
+
+.title{
+  font-size: 35px;
+  text-align:center;
+  color:#333333;
+  font-weight: bold;
+  font-family: "Lucida Console", "Courier New", monospace;
+  }
+
+
+  .text{
+    font-size: 18px;
+    text-align:left;
+    padding: 1px;
+    color:#333333;
+    font-weight: bold;
+    font-family: "Lucida Console", "Courier New", monospace;
+    }

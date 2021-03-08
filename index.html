@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" >
+  <title> Amicable Numbers </title>
+  <link rel='stylesheet' type="text/css" href="style.css" />
+  </head>
+
+  <body>
+
+    <div id='top'>
+      <div class='title' >
+          Are your numbers amicable?
+      </div>
+    </div>
+
+    <form id="frm1" action="/action_page.php">
+      First Number: <input class="text" type="text" id="fnum"><br>
+      Second Number: <input class="text" type="text" id="snum"><br><br>
+      <input class= "button button1" type="button" onclick="variables();" value="Test"/>
+    </form>
+
+    <div id='here'>&nbsp;</div>
+
+
+
+
+    <script language="javascript">
+
+    //Function for making the inputs variables
+    function variables() {
+      var fnum = parseInt(document.getElementById("fnum").value);
+      var snum = parseInt(document.getElementById("snum").value);
+
+//finding the factors of each inputted number
+    var factors1, factors2;
+    factors1 = checkFactors(fnum);
+    alert("The factors of " + fnum + " are: " + factors1);
+    factors2 =checkFactors(snum);
+    alert("The factors of " + snum + " are: " + factors2);
+
+//summing up factors of both numbers
+    var sum1, sum2;
+    sum1 = addFactors(factors1);
+    sum2 = addFactors(factors2);
+
+
+    if (snum==sum1 && fnum==sum2){
+      document.getElementById("here").innerHTML="The numbers: " + fnum +
+                                                " and " + snum + " are amicable :)";
+    }else{
+      document.getElementById("here").innerHTML="The numbers: " + fnum +
+                                                " and " + snum + " are not amicable :(";
+    }
+
+    }
+//function to get anarray of all the factors for each number (excluing 1 and the number)
+//inputs: the user inputted nuberrs
+//outputs:an array of the factors
+    function checkFactors(num){
+      var numbers = [];
+
+      for(let i = 1; i < num; i++) {
+        // check if number is a factor
+        if(num % i == 0) {
+          numbers.push(i);
+        }
+      }
+    return numbers;
+    }
+
+//function to sum up the factors of each number
+//inputs: the array of factors
+//outputs: the sum of the factors
+    function addFactors(factors){
+      var sum = 0;
+      for (j=0; j<factors.length; j++){
+        sum = sum + factors[j];
+      }
+      return sum;
+    }
+
+
+
+
+    </script>
+
+  </body>
+<html>
